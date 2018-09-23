@@ -33,4 +33,9 @@ node {
             app.push("latest")
         }
     }
+    
+    stage('Clean up') {
+        /* Remove tagged and dangling images */
+        sh 'docker rmi -f $(docker images -q -f)'
+    }
 }
