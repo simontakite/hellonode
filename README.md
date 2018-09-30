@@ -6,4 +6,4 @@ It includes a `Dockerfile` for building a Docker image with the application, and
 https://getintodevops.com
 
 
-MINISHIFT_ENABLE_EXPERIMENTAL=y minishift start --memory 4GB vm-driver virtualbox --extra-clusterup-flags "--enable=*,service-catalog" 
+MINISHIFT_ENABLE_EXPERIMENTAL=y minishift start --memory 3GB --vm-driver virtualbox --extra-clusterup-flags "--enable=*,service-catalog,automation-service-broker,rhel-imagestreams,router,registry" 
